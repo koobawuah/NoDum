@@ -14,8 +14,10 @@ import {
   Text,
   useColorScheme,
 } from 'react-native';
+import { COLORS, SIZES } from './src/constants';
+import { CustomInput } from './src/components';
 
-const App = () => {
+const App = (props) => {
 
     const color = {
         dark: '#000000',
@@ -29,13 +31,19 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text>NoDum </Text>
+      <CustomInput label='FROM'/>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: COLORS.bgColor,
+        paddingHorizontal: SIZES.margin,
+    }
+})
 
 export default App;

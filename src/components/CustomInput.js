@@ -7,10 +7,10 @@ const CustomInput = (props) => {
     
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, props.style] }>
           <Text style={styles.labelText} >{props.label} </Text>
           <TextInput 
-            style={styles.CustomInput}
+            style={styles.CustomInput }
             placeholder={props.placeholder}
             value={props.value} 
             onChangeText={props.onChangeText} 
